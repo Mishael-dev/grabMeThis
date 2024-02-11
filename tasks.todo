@@ -18,4 +18,13 @@ getting started
   - download and setup shadcn ui //
   - configure the theme //
   - create a container for the elements on the page '//
-  - download and configure font and typography
+  - download and configure font and typography //
+
+order placement
+  - create place order route //
+  - create form component 
+  - create new railawy project 
+  - spin up flask server 
+  - connect flak sever to railway database 
+  - connect form to flak server 
+

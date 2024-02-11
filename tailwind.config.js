@@ -5,6 +5,7 @@ module.exports = {
     './pages/**/*.{js,jsx}',
     './components/**/*.{js,jsx}',
     './app/**/*.{js,jsx}',
+    './src/**/*.{js,jsx}',
   ],
   prefix: "",
   theme: {
@@ -14,10 +15,6 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
-    },
-    fontFamily: {
-      "courierHeader" : ["courierBold"],
-      "courierParagraph" : ["courierRegular"]
     },
     extend: {
       colors: {
