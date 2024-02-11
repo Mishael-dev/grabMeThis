@@ -25,6 +25,7 @@ const OrderForm = () => {
   const { register, handleSubmit } = useForm();
   const addItem = OrderStore((state) => state.addItem);
   const items = OrderStore((state) => state.items);
+  const getTotalPrice = OrderStore((state) => state.getTotalPrice);
 
   const onItemSubmit = (data) => {
     addItem(data);
@@ -32,7 +33,7 @@ const OrderForm = () => {
   };
 
   return (
-    <section className="mt-12 flex flex-col gap-y-4 ">
+    <section className="mt-12 flex flex-col gap-y-6 ">
       <div className="flex flex-col gap-y-2">
         <div className="flex justify-between">
           <H2>Items</H2>
@@ -61,8 +62,9 @@ const OrderForm = () => {
                   </Label>
                   <Input
                     id="item"
+                    type="text"
                     {...register("name", { required: true })}
-                    className="col-span-3"
+                    className="col-span-3 "
                   />
                 </div>
                 <div className="flex flex-col items-start">
@@ -71,6 +73,7 @@ const OrderForm = () => {
                   </Label>
                   <Input
                     id="price"
+                    type="number"
                     {...register("price", { required: true })}
                     className="col-span-3"
                   />
@@ -81,6 +84,7 @@ const OrderForm = () => {
                   </Label>
                   <Input
                     id="price"
+                    type="number"
                     placeholder="e.g 7"
                     {...register("number", { required: true })}
                     className="col-span-3"
@@ -105,12 +109,28 @@ const OrderForm = () => {
             <div className="rounded-lg p-6 bg-white flex flex-col gap-y-4">
               {items.map((item) => (
                 <div className="flex gap-x-4 ">
-                  <span className=" capitalize text-xl">{item.name}</span>
+                  <span className=" capitalize text-xl">
+                    {`(${item.number})${item.name}`}
+                  </span>
                   <span className="text-primary font-bold text-lg">
-                    {item.price}
+                    ₦{item.price}
                   </span>
                 </div>
               ))}
+
+              <hr />
+
+              <div className="flex gap-x-4 ">
+                <span className=" capitalize text-xl">Service Fee</span>
+                <span className="text-primary font-bold text-lg">₦{200}</span>
+              </div>
+
+              <div className="flex gap-x-4 ">
+                <span className=" capitalize text-xl">Total</span>
+                <span className="text-primary font-bold text-lg">
+                  ₦{getTotalPrice()}
+                </span>
+              </div>
             </div>
           )}
         </div>
