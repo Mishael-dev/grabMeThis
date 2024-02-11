@@ -1,8 +1,8 @@
 import classNames from "classnames"
 
-const Container = ({ lg = false, md = false, sm = false, children }) => {
+const Container = ({ sm = false, children }) => {
   return (
-    <div classname={""}>
+    <div className={ classNames("mx-auto", "max-w-7xl px-12", classNames({"max-w-3xl":true}))}>
         {children}
     </div>
   )

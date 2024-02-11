@@ -2,10 +2,9 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    './pages/**/*.{js,jsx}',
+    './components/**/*.{js,jsx}',
+    './app/**/*.{js,jsx}',
   ],
   prefix: "",
   theme: {
@@ -15,6 +14,10 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
+    },
+    fontFamily: {
+      "courierHeader" : ["courierBold"],
+      "courierParagraph" : ["courierRegular"]
     },
     extend: {
       colors: {

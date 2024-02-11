@@ -3,6 +3,16 @@
 @tailwind utilities;
 @tailwind base;
 
+@font-face {
+  font-family: "courierBold";
+  src: url("/Courier_Prime/CourierPrime-Bold.ttf");
+}
+
+@font-face {
+  font-family: "courierRegular";
+  src: url("/Courier_Prime/CourierPrime-Regular.ttf");
+}
+
 
 
 @layer base {
