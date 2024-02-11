@@ -1,0 +1,20 @@
+# Features 
+
+## Core 
+- order placement 
+- Receiving payment from client 
+- Payment to dispatcher 
+
+## Auxilary 
+- landing page 
+- user login 
+- delivery confirmation
+
+
+## tasks 
+
+getting started
+  - clear the main //
+  - download and setup shadcn ui //
+  - configure the theme //
+  - create a container for the elements on the page 
