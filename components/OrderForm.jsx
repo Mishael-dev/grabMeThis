@@ -107,8 +107,8 @@ const OrderForm = () => {
             </div>
           ) : (
             <div className="rounded-lg p-6 bg-white flex flex-col gap-y-4">
-              {items.map((item) => (
-                <div className="flex gap-x-4 ">
+              {items.map((item, index) => (
+                <div key={index} className="flex gap-x-4 ">
                   <span className=" capitalize text-xl">
                     {`(${item.number})${item.name}`}
                   </span>
